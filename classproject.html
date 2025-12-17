@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Netflix — Clone (Demo)</title>
+  <style>
+    :root{--red:#e50914;--bg:#141414;--muted:#b3b3b3}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:#fff}
+    a{color:inherit}
+    .header{background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.8)),url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=') center/cover no-repeat;padding:28px 6vw}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .logo{height:40px}
+    .nav-actions{display:flex;gap:.5rem;align-items:center}
+    .language-btn{background:transparent;border:1px solid rgba(255,255,255,.12);color:#fff;padding:.35rem .6rem;border-radius:3px;display:inline-flex;gap:.4rem;align-items:center}
+    .signin{background:var(--red);border:none;padding:.45rem .9rem;border-radius:3px;color:#fff;font-weight:600}
+    .header-content{max-width:720px;margin:6rem auto;padding:2rem 0;text-align:center}
+    .header-content h1{font-size:2.3rem;margin:0 0 .6rem}
+    .header-content h3{margin:0 0 1rem;font-weight:500;color:var(--muted)}
+    .cta{display:flex;gap:.5rem;justify-content:center;margin-top:1rem}
+    .email-signup input{padding:.8rem;min-width:260px;border:0;border-radius:3px}
+    .email-signup button{padding:.8rem 1rem;border-radius:3px;border:0;background:var(--red);color:#fff;font-weight:700}
+
+    .features{padding:3rem 6vw;background:#000}
+    .row{display:flex;gap:2rem;align-items:center;flex-wrap:wrap;margin-bottom:2rem}
+    .text-col{flex:1;min-width:260px}
+    .image-col{flex:1;min-width:260px}
+    .image-col img{width:100%;max-width:520px;border-radius:8px;display:block}
+
+    .faq{padding:3rem 6vw;color:#fff}
+    .faq h2{text-align:center}
+    details{background:#111;padding:1rem;border-radius:6px;margin:0.6rem 0}
+    summary{cursor:pointer;font-weight:700}
+    .footer{background:#000;padding:2.5rem 6vw;color:var(--muted)}
+    .footer .row{display:flex;gap:2rem;flex-wrap:wrap}
+    .col{min-width:140px}
+    .copyright-txt{margin-top:1rem;color:var(--muted)}
+
+    @media (max-width:720px){
+      .header-content h1{font-size:1.6rem}
+      .cta{flex-direction:column}
+      .image-col img{max-width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix logo">
+      <div class="nav-actions">
+        <button class="language-btn" aria-label="Select language">English ▾</button>
+        <button class="signin">Sign in</button>
+      </div>
+    </nav>
+
+    <div class="header-content">
+      <h1>Unlimited movies, TV shows and more.</h1>
+      <h3>Watch anywhere. Cancel anytime.</h3>
+      <p>Ready to watch? Enter your email to create or restart your membership.</p>
+      <form class="email-signup" id="signup">
+        <div class="cta">
+          <input type="email" name="email" placeholder="Email address" required>
+          <button type="submit">Get Started</button>
+        </div>
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <section class="features">
+      <div class="row">
+        <div class="text-col">
+          <h2>Enjoy on your TV</h2>
+          <p>Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu‑ray players and more.</p>
+        </div>
+        <div class="image-col">
+          <img src="https://images.unsplash.com/photo-1581905764498-2f1c8b6b8f9d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="TV watching">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="image-col">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Download shows">
+        </div>
+        <div class="text-col">
+          <h2>Download your shows to watch offline</h2>
+          <p>Save your favourites easily and always have something to watch.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="text-col">
+          <h2>Watch everywhere</h2>
+          <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+        </div>
+        <div class="image-col">
+          <img src="https://images.unsplash.com/photo-1517260913563-2b6d0f8f8b5b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Devices">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="image-col">
+          <img src="https://images.unsplash.com/photo-1582719478250-6b1b61c6c1d4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" alt="Kids profile">
+        </div>
+        <div class="text-col">
+          <h2>Create profiles for children</h2>
+          <p>Kids get their own space with age‑appropriate content included in your membership.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+
+      <details>
+        <summary>What is Netflix?</summary>
+        <div class="content"><p>Netflix is a subscription-based streaming service offering a wide variety of TV shows, movies, documentaries, and original programming across internet-connected devices.</p></div>
+      </details>
+
+      <details>
+        <summary>How much does Netflix cost?</summary>
+        <div class="content"><p>Pricing depends on region and plan. Check Netflix's official site for current plans and prices.</p></div>
+      </details>
+
+      <details>
+        <summary>Where can I watch?</summary>
+        <div class="content"><p>You can watch on smart TVs, streaming devices, consoles, phones, tablets and computers via the Netflix app or website.</p></div>
+      </details>
+
+      <details>
+        <summary>How do I cancel?</summary>
+        <div class="content"><p>Sign in, go to Account &gt; Cancel Membership and follow the prompts. Your account stays active until the end of the billing period.</p></div>
+      </details>
+
+      <details>
+        <summary>Is Netflix good for kids?</summary>
+        <div class="content"><p>Netflix offers a Kids profile with age-appropriate content and parental controls.</p></div>
+      </details>
+
+      <div style="margin-top:1rem;">
+        <small>Ready to watch? Enter your email to create or restart your membership.</small>
+        <form class="email-signup" style="margin-top:.5rem" onsubmit="event.preventDefault();alert('Demo: email submitted');">
+          <input type="email" placeholder="Email address" required>
+          <button type="submit">Get Started</button>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h3>Questions? Call 000‑000‑0000</h3>
+    <div class="row">
+      <div class="col"><a href="#">FAQ</a><br><a href="#">Investor Relations</a><br><a href="#">Privacy</a></div>
+      <div class="col"><a href="#">Help Center</a><br><a href="#">Jobs</a><br><a href="#">Cookie Preferences</a></div>
+      <div class="col"><a href="#">Account</a><br><a href="#">Ways to Watch</a><br><a href="#">Corporate Information</a></div>
+      <div class="col"><a href="#">Media</a><br><a href="#">Terms of Use</a><br><a href="#">Contact Us</a></div>
+    </div>
+    <button class="language-btn" style="margin-top:1rem">English ▾</button>
+    <p class="copyright-txt">Netflix India</p>
+  </footer>
+
+  <!-- Compact version (copy-paste for a minimal demo) -->
+  <!--
+  <!doctype html>
+  <html>
+  <head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Netflix Mini</title>
+  <style>body{font-family:Arial;background:#111;color:#fff;margin:0;padding:20px}.logo{height:36px}header{display:flex;justify-content:space-between;align-items:center}main{max-width:900px;margin:20px auto}form{display:flex;gap:8px}input{flex:1;padding:8px}button{padding:8px;background:#e50914;border:0;color:#fff}</style>
+  </head>
+  <body>
+  <header><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="logo"><div><button>Sign in</button></div></header>
+  <main><h1>Unlimited movies, TV shows and more.</h1><p>Watch anywhere. Cancel anytime.</p>
+  <form onsubmit="event.preventDefault();alert('Demo')"><input type="email" placeholder="Email"><button>Get Started</button></form>
+  </main>
+  </body>
+  </html>
+  -->
+
+</body>
+</html> 
