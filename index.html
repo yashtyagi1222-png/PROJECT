@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NETFLIX</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Netflix+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <a href="#" class="logo">
+        <svg viewBox="0 0 111 30" class="logo-svg" aria-label="Netflix">
+          <path d="M105.062 14.28L111 30c-1.75-.25-3.499-.563-5.28-.845l-3.345-9.194-3.437 8.996c-1.688-.25-3.344-.375-5.031-.595l6.031-15.708L94.468 0h5.063l3.062 8.56L105.875 0h5.187l-6 14.28zM90.47 0h-4.594v27.034c1.5.094 3.031.156 4.594.25V0zm-8.563 26.34c-4.187-.313-8.375-.5-12.656-.5V0h4.594v21.778c2.756.094 5.5.313 8.062.5v4.062zM64.25 10.657v4.094h-6.406V26H53.25V0h13.687v4.125h-9.094v6.532H64.25zm-17.962-6.5H40V26.25c-1.5 0-3 0-4.531.031V4.157h-6.344V0H46.3l-.013 4.157zM20.97 18.375S14.97 1.504 14.78 0h-5.375v28.09c1.656.094 3.281.188 4.906.313V9.125l6.344 19.438c1.75.156 3.5.344 5.218.5V0h-4.906l.003 18.375z" fill="#e50914"/>
+        </svg>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">TV Shows</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">New &amp; Popular</a></li>
+        <li><a href="#">My List</a></li>
+        <li><a href="#">Browse by Languages</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="search-wrap" id="searchWrap">
+        <button class="search-btn" id="searchToggle" aria-label="Search">
+          <i class="fa fa-search"></i>
+        </button>
+        <input type="text" class="search-input" id="searchInput" placeholder="Titles, people, genres"/>
+      </div>
+      <button class="icon-btn" aria-label="Notifications">
+        <i class="fa fa-bell"></i>
+        <span class="badge">3</span>
+      </button>
+      <div class="profile-wrap" id="profileWrap">
+        <img src="https://occ-0-8407-3647.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Nn6U4siA0/AAAABdpkabKqmuJxlUMFJrgTSbZZnRiC1bwkdAZzJiEn3gOoSgKKGBqM5f5f7QfC7rjYNVSrICOXMQlPxFLI.png" alt="Profile" class="profile-img" />
+        <i class="fa fa-caret-down profile-caret"></i>
+        <div class="profile-dropdown" id="profileDropdown">
+          <div class="profile-list">
+            <div class="profile-item"><img src="https://occ-0-8407-3647.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Nn6U4siA0/AAAABdpkabKqmuJxlUMFJrgTSbZZnRiC1bwkdAZzJiEn3gOoSgKKGBqM5f5f7QfC7rjYNVSrICOXMQlPxFLI.png" alt=""/><span>Alex</span></div>
+            <div class="profile-item"><img src="https://occ-0-7166-938.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Nn6U4siA0/AAAABf8RvRe7-V9hS5GvKiJ_kDKlqLJXi5-CiNQqJj5YMQvvPUPHFXyWn7RCIM0A2kFE_OcMTVhzlhiQzixQDHC.png" alt=""/><span>Kids</span></div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <ul class="dropdown-menu-list">
+            <li><i class="fa fa-edit"></i> Manage Profiles</li>
+            <li><i class="fa fa-transfer-alt"></i> Transfer Profile</li>
+            <li><i class="fa fa-user"></i> Account</li>
+            <li><i class="fa fa-question-circle"></i> Help Center</li>
+          </ul>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-signout">Sign out of Netflix</div>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=1920&q=80" alt="Featured" class="hero-img" id="heroBg"/>
+      <div class="hero-gradient"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badges">
+        <span class="badge-top10"><i class="fa fa-play"></i> #1 in Series Today</span>
+      </div>
+      <h1 class="hero-title">Stranger Things</h1>
+      <div class="hero-meta">
+        <span class="match">98% Match</span>
+        <span class="year">2023</span>
+        <span class="rating">TV-14</span>
+        <span class="seasons">4 Seasons</span>
+        <span class="hd">HD</span>
+      </div>
+      <p class="hero-desc">When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
+      <div class="hero-btns">
+        <button class="btn btn-play" onclick="openModal(featuredShow)">
+          <i class="fa fa-play"></i> Play
+        </button>
+        <button class="btn btn-info" onclick="openModal(featuredShow)">
+          <i class="fa fa-info-circle"></i> More Info
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT ROWS -->
+  <main class="content" id="content">
+
+    <section class="row-section" data-row="0">
+      <h2 class="row-title">Continue Watching for Alex</h2>
+      <div class="slider-wrap">
+        <button class="arrow arrow-left" aria-label="Scroll left"><i class="fa fa-chevron-left"></i></button>
+        <div class="slider" id="row-0"></div>
+        <button class="arrow arrow-right" aria-label="Scroll right"><i class="fa fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <section class="row-section" data-row="1">
+      <h2 class="row-title">Trending Now</h2>
+      <div class="slider-wrap">
+        <button class="arrow arrow-left" aria-label="Scroll left"><i class="fa fa-chevron-left"></i></button>
+        <div class="slider" id="row-1"></div>
+        <button class="arrow arrow-right" aria-label="Scroll right"><i class="fa fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <section class="row-section" data-row="2">
+      <h2 class="row-title">Top 10 in India Today</h2>
+      <div class="slider-wrap">
+        <button class="arrow arrow-left" aria-label="Scroll left"><i class="fa fa-chevron-left"></i></button>
+        <div class="slider top10-row" id="row-2"></div>
+        <button class="arrow arrow-right" aria-label="Scroll right"><i class="fa fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <section class="row-section" data-row="3">
+      <h2 class="row-title">Popular on Netflix</h2>
+      <div class="slider-wrap">
+        <button class="arrow arrow-left" aria-label="Scroll left"><i class="fa fa-chevron-left"></i></button>
+        <div class="slider" id="row-3"></div>
+        <button class="arrow arrow-right" aria-label="Scroll right"><i class="fa fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <section class="row-section" data-row="4">
+      <h2 class="row-title">New Releases</h2>
+      <div class="slider-wrap">
+        <button class="arrow arrow-left" aria-label="Scroll left"><i class="fa fa-chevron-left"></i></button>
+        <div class="slider" id="row-4"></div>
+        <button class="arrow arrow-right" aria-label="Scroll right"><i class="fa fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <section class="row-section" data-row="5">
+      <h2 class="row-title">My List</h2>
+      <div class="slider-wrap">
+        <button class="arrow arrow-left" aria-label="Scroll left"><i class="fa fa-chevron-left"></i></button>
+        <div class="slider" id="row-5"></div>
+        <button class="arrow arrow-right" aria-label="Scroll right"><i class="fa fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close"><i class="fa fa-times"></i></button>
+      <div class="modal-hero">
+        <div class="modal-video-wrap">
+          <iframe id="modalIframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Trailer"></iframe>
+          <div class="modal-poster-fallback" id="modalPoster"></div>
+        </div>
+        <div class="modal-hero-gradient"></div>
+        <div class="modal-hero-info">
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <div class="modal-btns">
+            <button class="btn btn-play btn-sm"><i class="fa fa-play"></i> Play</button>
+            <button class="modal-action-btn" aria-label="Add to list"><i class="fa fa-plus"></i></button>
+            <button class="modal-action-btn" aria-label="Like"><i class="fa fa-thumbs-up"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-left">
+          <div class="modal-meta" id="modalMeta"></div>
+          <p class="modal-desc" id="modalDesc"></p>
+        </div>
+        <div class="modal-right">
+          <p id="modalCast"></p>
+          <p id="modalGenres"></p>
+          <p id="modalMood"></p>
+        </div>
+      </div>
+      <div class="modal-more">
+        <h3>More Like This</h3>
+        <div class="modal-more-grid" id="modalMore"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#">Audio Description</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Media Center</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Investor Relations</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Legal Notices</a></li>
+          <li><a href="#">Cookie Preferences</a></li>
+          <li><a href="#">Corporate Information</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Do Not Sell or Share My Personal Information</a></li>
+          <li><a href="#">Ad Choices</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+      <div class="footer-lang">
+        <button class="lang-btn"><i class="fa fa-globe"></i> English</button>
+      </div>
+      <p class="footer-copy">&copy; 2024 Netflix Clone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
